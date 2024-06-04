@@ -37,7 +37,7 @@ const tariff = {
 
 calcForm.addEventListener('input', () => {                                              //блокировать кнопку
   if (calcForm.width.value > 0 && calcForm.length.value > 0) {             //или так  btnSubmit.disabled = !(calcForm.width.value > 0 && calcForm.length.value > 0)
-     btnSubmit.disabled = false
+    btnSubmit.disabled = false
   } else {
     btnSubmit.disabled = true
   }
@@ -152,8 +152,8 @@ const validator = new JustValidate('.modal__form', {
 validator
 .addField('#name', [
   {
-   rule: 'required' ,
-   errorMessage: 'Как вас зовут?'
+    rule: 'required' ,
+    errorMessage: 'Как вас зовут?'
   },
   {
     rule: 'minLength',
@@ -168,8 +168,8 @@ validator
 ])
 .addField('#phone', [
   {
-   rule: 'required' ,
-   errorMessage: 'Укажите ваш телефон'
+    rule: 'required' ,
+    errorMessage: 'Укажите ваш телефон'
   },
   {
     validator: value => {
@@ -186,8 +186,8 @@ validator.onSuccess(() => {
   fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
     body: JSON.stringify({
-     name: form.name.value,
-     phone: form.phone.value
+      name: form.name.value,
+      phone: form.phone.value
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
